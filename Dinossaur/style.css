@@ -1,0 +1,64 @@
+body {
+    background-color: black
+}
+
+#background {
+    background-image: url(Dinossaur/ground.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border: solid 2px;
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#cactus {
+    background-image: url(Dinossaur/cactus.png);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    /* this code makes the position of cactus to not respect the limits of the paent div,
+    however when we put 'position:relative' in the parent 'background' div.
+     */
+    position: absolute;
+    bottom: 9px;
+    animation: cactus-animation 2s infinite linear;
+}
+
+@keyframes cactus-animation {
+    From {
+        left: 790px;
+    }
+    To {
+        left: -50px;
+    }
+}
+
+#dino {
+    background-image: url(Dinossaur/trex.png);
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 94px;
+    position: absolute;
+    bottom: 16px;
+    animation: jump 2s infinite;
+}
+
+.jump{
+    animation
+}
+
+@keyframes jump {
+    0% {
+        bottom: 16px;
+    }
+    50%  {
+        bottom: 120px;
+    }
+    100% {
+        bottom: 16px;
+    }
+}
